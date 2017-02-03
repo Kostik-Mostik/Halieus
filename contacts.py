@@ -266,7 +266,7 @@ self.nonVisitNew.get().strip()))
         elif self.sortCon.get()==2: self.content.sort(key=lambda x: x[2])  
         elif self.sortCon.get()==3: self.content.sort(key=lambda x: x[3], reverse=True)          
         for i in range(len(self.content)): 
-            self.contentFormatted.append((i+1, "№%s–%s" % (self.content[i][0][:5], self.content[i][4].address[:25]), self.content[i][1][:25], self.content[i][2][:25], self.content[i][3])) 
+            self.contentFormatted.append((i+1, "№%s–%s" % (self.content[i][0][:5], self.content[i][4].address[:35]), self.content[i][1][:35], self.content[i][2][:35], self.content[i][3])) 
         return self.contentFormatted 
  
     def openTer(self, event=None): 
