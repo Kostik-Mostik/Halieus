@@ -41,7 +41,7 @@ def getContentMod(self):
         self.ter.extra[0].sort(key=lambda x: x[0])  
         output=[] 
         for i in range(len(self.ter.extra[0])):
-            if self.ter.extra[0][i][2]!="": nonVisit=" (не пос. до %s)" % self.ter.extra[0][i][2].strip()
+            if self.ter.extra[0][i][2]!="": nonVisit=" (не пос.до %s)" % self.ter.extra[0][i][2].strip()
             else: nonVisit="" 
             output.append([i+1, self.ter.extra[0][i][0], self.ter.extra[0][i][1]+nonVisit]) 
         return output
@@ -95,7 +95,7 @@ def exportTab(self):
     ws.col(1).width = 6500      
     row=1 
     col=0 
-    if len(self.ter.extra[0])>20: pagesTotal=2 
+    if len(self.ter.extra[0])>=20: pagesTotal=2 
     address=""             
     try: self.ter.extra[0].sort(key=lambda x: int(x[0]))  
     except: self.ter.extra[0].sort(key=lambda x: x[0])  
