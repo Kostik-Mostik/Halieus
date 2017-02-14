@@ -95,7 +95,7 @@ def exportTab(self):
     ws.col(1).width = 6500      
     row=1 
     col=0 
-    if len(self.ter.extra[0])>20: pagesTotal=2 
+    if len(self.ter.extra[0])>=20: pagesTotal=2 
     address=""             
     try: self.ter.extra[0].sort(key=lambda x: int(x[0]))  
     except: self.ter.extra[0].sort(key=lambda x: x[0])  
